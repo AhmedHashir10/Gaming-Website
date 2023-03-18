@@ -11,7 +11,7 @@ const HomePage = () => (
     <Grid />
     <div className="flex justify-center ">
     <div className="h-14 w-fit px-4 text-white flex justify-center items-center bg-red-600 hover:bg-blue-400 duration-200 mt-5">
-        <div>VIEW ALL NEWS</div>
+        <div>DOWNLOAD FANKIT</div>
         </div>
         </div>
   </div>
