@@ -4,6 +4,7 @@ import logo from '../public/logo.svg'
 import pc from '../public/icons/pc.svg'
 import ps from '../public/icons/ps.svg'
 import xbox from '../public/icons/xbox.svg'
+import logo2 from '../public/icons/logo2.svg'
 
 
 export default function HeroSection() {
@@ -14,17 +15,17 @@ export default function HeroSection() {
         src={im}
         alt='/'
       />
-      <div className="absolute flex flex-col  text-2.25 text-yellow-500 top-56 left-56">
+      <div className="absolute flex flex-col  text-2.25 text-yellow-500 top-56 left-56 space-y-4">
         <div style={{ marginRight: '20px' }}>
           <Image
             className='cursor-pointer object-cover h-full w-full'
-            src={logo}
+            src={logo2}
             alt='/'
           />
         </div>
-        <div style={{ marginTop: '10px' }} className="flex flex-row pd-5 justify-center">
+        <div style={{ marginTop: '10px' }} className="flex flex-row pd-5 justify-center ">
           <Image
-            className='cursor-pointer object-cover w-6 filter-invert mr-2'
+            className='cursor-pointer object-cover w-6 filter-invert mr-2 '
             src={pc}
             alt='/' />
           <Image
@@ -36,9 +37,9 @@ export default function HeroSection() {
             src={pc}
             alt='/' />
         </div>
-        <div className="text-2.25 flex justify-center" style={{ textShadow: '0.1875rem 0.1875rem 0.3125rem rgba(0,0,0,.3)' }}>AVAILABLE
+        <div className="text-3xl  flex justify-center " >AVAILABLE
         </div>
-        <div className=" text-2.25 flex justify-center" style={{ textShadow: '0.1875rem 0.1875rem 0.3125rem rgba(0,0,0,.3)' }}>
+        <div className=" text-3xl  flex justify-center" >
           03.07.2023
         </div>
         <div className="flex justify-center items-center gap-2">
