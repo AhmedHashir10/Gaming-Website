@@ -1,27 +1,61 @@
+import Card from "./cards_news"
+import newsImage from "../public/news_pic.jpg";
 
+// const cardsData = [
+//     {
+//       imageUrl: {newsImage},
+//       title: 'Card 1',
+//       description: 'This is the description for card 1.',
+//     },
+//     {
+//       imageUrl: {newsImage},
+//       title: 'Card 2',
+//       description: 'This is the description for card 2.',
+//     },
+//   ];
 
 export default function News() {
-    return <section>
-        <div className="relative w-screen  bg-blue-400 min-h-100">
-
-            
-                <div className="text-2xl text-yellow-200 flex flex-column justify-center text-yellow ">
-                    WELCOME TO
-                </div>
-                <div className="text-4xl text-yellow-200 flex flex-column justify-center text-yellow">
-                    THE FUTURE
-                </div>
-                <div className="text-4xl text-yellow-200 flex flex-column justify-center text-yellow ">
-                TRY NOT TO BREAK IT
-                </div>
-                <div className="text-4xl text-yellow-200 flex flex-column justify-center text-yellow ml-20 mr-20">
-                Lost in transit while on a colonist ship bound for the furthest edge of the galaxy, you awake decades later than you expected only to find yourself in the midst of a deep conspiracy threatening to destroy the Halcyon colony.
-                </div>
-                <div className="text-4xl text-yellow-200 flex flex-column justify-center text-yellow ml-20 mr-20">
-                As you explore the furthest reaches of space and encounter a host of factions all vying for power, who you decide to become will determine the fate of everyone in Halcyon. In the corporate equation for the colony, you are the unplanned variable.
-                </div>
-
-
+    return <section className="bg-[#102935] py-10">
+        <h1 className="flex justify-center text-[#FBEAC2] text-4xl mb-10">NEWS</h1>
+        <div className="grid grid-cols-4 gap-4 container mx-auto mt-2 mb-10">
+        <Card
+          imageUrl={newsImage}
+          title='The Outer Worlds • February 27, 2023'
+          description=' The Outer Worlds: Spacer’s Choice Edition Available March 7th! '
+        />
+        <Card
+          imageUrl={newsImage}
+          title='The Outer Worlds • February 27, 2023'
+          description=' The Outer Worlds: Spacer’s Choice Edition Available March 7th! '
+        />
+        <Card
+          imageUrl={newsImage}
+          title='The Outer Worlds • February 27, 2023'
+          description=' The Outer Worlds: Spacer’s Choice Edition Available March 7th! '
+        />
+        <Card
+          imageUrl={newsImage}
+          title='The Outer Worlds • February 27, 2023'
+          description=' The Outer Worlds: Spacer’s Choice Edition Available March 7th! '
+        />
         </div>
+        <div className="flex justify-center">
+        <div className="h-14 w-fit px-4 text-white flex justify-center items-center bg-red-600 hover:bg-blue-400 duration-200">
+        <div>Buy Now</div>
+        </div>
+        </div>
+      {/* {cardsData.map((card, index) => (
+        <Card
+          key={index}
+          imageUrl={card.imageUrl}
+          title={card.title}
+          description={card.description}
+        />
+      ))} */}
+    
     </section>
 }
+
+
+
+

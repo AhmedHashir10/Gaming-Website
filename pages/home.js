@@ -40,8 +40,9 @@ export default function Home()
         </h1>
       </section>
       <hr /> */}
+      
+      <Media/>
       <News/>
-      {/* <Media/> */}
       <Footer/>
     </div>
     )
