@@ -41,7 +41,7 @@ export default function News() {
         </div>
         <div className="flex justify-center">
         <div className="h-14 w-fit px-4 text-white flex justify-center items-center bg-red-600 hover:bg-blue-400 duration-200">
-        <div>Buy Now</div>
+        <div>VIEW ALL NEWS</div>
         </div>
         </div>
       {/* {cardsData.map((card, index) => (

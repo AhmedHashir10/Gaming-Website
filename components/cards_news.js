@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Card = ({ imageUrl, title, description }) => {
   return (
-    <div className=" overflow-hidden rounded-lg shadow-md hover:shadow-lg">
+    <div className=" overflow-hidden  shadow-md hover:shadow-lg">
       <div className="w-full">
         <Image
           src={imageUrl}
