@@ -4,7 +4,7 @@ import NavLogo from "../public/logo.svg";
 export default function Header() {
   return (
     <div>
-      <ul className="ml-60 hidden md:flex">
+      <ul className="ml-60 md:flex">
         <li className="ml-1">
           <Image alt="logo" src={NavLogo} width="100" height="40" />
         </li>

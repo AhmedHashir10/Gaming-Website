@@ -41,7 +41,7 @@ export default function Home()
       </section>
       <hr /> */}
       <News/>
-      <Media/>
+      {/* <Media/> */}
       <Footer/>
     </div>
     )
