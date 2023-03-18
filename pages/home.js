@@ -9,7 +9,7 @@ import News from "@/components/News";
 export default function Home()
 {
     return(
-        <div className="overflow-x-hidden overflow-y-auto">
+        <div className="overflow-x-hidden overflow-y-auto m-0">
         <Header />
       <NavBar />
       <HeroSection/>

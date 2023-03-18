@@ -28,7 +28,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <>
+    <div className='sticky z-[50]'>
       <div
         style={{ backgroundColor: `${navBg}`}}
         className={
@@ -38,7 +38,7 @@ const Navbar = () => {
             
         }
       >
-        <div className='flex justify-center items-center w-full h-full px-16 2xl:px-16'>
+        <div className=' flex justify-center items-center w-full h-full px-16 2xl:px-16'>
 
           <div>
             <ul style={{ color: `${linkColor}` }} className=' hidden md:flex '>
@@ -154,7 +154,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
