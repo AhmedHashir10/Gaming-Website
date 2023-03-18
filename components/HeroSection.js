@@ -4,7 +4,7 @@ import logo from '../public/logo.svg'
 import pc from '../public/icons/pc.svg'
 import ps from '../public/icons/ps.svg'
 import xbox from '../public/icons/xbox.svg'
-import logo2 from '../public/icons/logo2.svg'
+
 
 
 export default function HeroSection() {
@@ -19,7 +19,7 @@ export default function HeroSection() {
         <div style={{ marginRight: '20px' }}>
           <Image
             className='cursor-pointer object-cover h-full w-full'
-            src={logo2}
+            src={logo}
             alt='/'
           />
         </div>
