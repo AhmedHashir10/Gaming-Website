@@ -37,7 +37,8 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className=" flex justify-center py-5">
+                    <div className='flex justify-center'>
+                    <div className=" flex-wrap justify-center py-5 ">
 
                         <Image
                             className='h-12  inline-block mx-2'
@@ -61,6 +62,7 @@ const Footer = () => {
                         />
 
 
+                    </div>
                     </div>
                     <div className="w-full  text-center py-5 ">
                         <p className="text-xs mt-2 text-[#303030] py-1.5 ">

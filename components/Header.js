@@ -18,7 +18,7 @@ export default function Header() {
     //   </div>
     // </div>
     <div className=" bg-[#1a1a1a]  ">
-      <header class="px-35 py-4 flex items-center justify-between mr-10 ml-10 bg-[#1a1a1a] h-10">
+      <header class="px-35 py-4 flex items-center justify-between mr-10 ml-10 bg-[#1a1a1a] h-10 ">
         <div class="flex items-center">
           <Image alt="logo" src={logoHeader} width="100" height="40" className="invert" />
         </div>

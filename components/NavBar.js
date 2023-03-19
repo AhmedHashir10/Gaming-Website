@@ -17,26 +17,21 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const handleShadow = () => {
+    function handleShadow() {
       if (window.scrollY >= 200) {
         setShadow(true);
       } else {
         setShadow(false);
       }
-    };
+    }
     window.addEventListener('scroll', handleShadow);
   }, []);
 
   return (
-    <div className='sticky z-[50]'>
+    <>
       <div
         style={{ backgroundColor: `${navBg}`}}
-        className={
-          shadow
-            ? 'fixed w-full shadow-xl z-[100] ease-in-out duration-300'
-            : 'fixed w-full z-[100]'
-            
-        }
+        
       >
         <div className=' flex justify-center items-center w-full h-full px-16 2xl:px-16'>
 
@@ -154,7 +149,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
