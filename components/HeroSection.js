@@ -8,6 +8,7 @@ import React, { useState } from 'react';
 import Heronine from '../public/heropics/sce-hero-960.jpg'
 import Herotwe from '../public/heropics/sce-hero-1200.jpg'
 
+
 // const [image, setImg] = useState()
 const imae = im
 
@@ -44,7 +45,7 @@ export default function HeroSection() {
         </div>
         <div className="text-3xl  flex justify-center text-shadow " >AVAILABLE
         </div>
-        <div className=" text-3xl  flex justify-center" >
+        <div className=" text-3xl  flex justify-center " >
           03.07.2023
         </div>
         <div className="flex justify-center items-center gap-2">

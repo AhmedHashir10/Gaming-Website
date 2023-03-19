@@ -5,6 +5,7 @@ import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 // import { useRouter } from 'next/router';
 import NavLogo from '../public/logo.svg'
 
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
