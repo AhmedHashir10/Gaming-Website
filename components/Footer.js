@@ -1,90 +1,71 @@
-import Link from 'next/link';
+import Link from "next/link";
+import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 import Image from "next/image";
-import logo1 from '../public/footerIcons/logo1.svg'
-import logo2 from '../public/footerIcons/logo2.svg'
-import logo3 from '../public/footerIcons/logo3.svg'
-import logo4 from '../public/footerIcons/logo4.svg'
-
-
+import logo1 from "../public/footerIcons/logo1.svg";
+import logo2 from "../public/footerIcons/logo2.svg";
+import logo3 from "../public/footerIcons/logo3.svg";
+import logo4 from "../public/footerIcons/logo4.svg";
 
 const Footer = () => {
-    return (
-        <footer className="bg-[#f0f0f0] text-[rgba(5,18,26,.6)] pt-8 pb-10 ">
-
-            <div className="container  flex  justify-center ml-auto mr-auto">
-                <div className='flex-col justify-center '>
-                    <div className="w-full  text-center text-1.75xl py-10 ">
-                        <ul className=" mb-4 md:mb-0">
-                            <li className="inline-block mr-6">
-                                <Link href="/privacy-cookies">
-                                    Privacy &amp; Cookies
-                                </Link>
-                            </li>
-                            <li className="inline-block mr-6">
-                                <Link href="/terms-of-use">
-                                    Terms of use
-                                </Link>
-                            </li>
-                            <li className="inline-block mr-6">
-                                <Link href="/legal">
-                                    Legal
-                                </Link>
-                            </li>
-                            <li className="inline-block mr-6">
-                                <Link href="/support">
-                                    Support
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className='flex justify-center'>
-                    <div className=" flex-wrap justify-center py-5 ">
-
-                        <Image
-                            className='h-12  inline-block mx-2'
-                            src={logo3}
-                            alt='/'
-                        />
-                        <Image
-                            className='h-12 inline-block mx-2'
-                            src={logo3}
-                            alt='/'
-                        />
-                        <Image
-                            className='h-12 inline-block mx-2'
-                            src={logo3}
-                            alt='/'
-                        />
-                        <Image
-                            className='h-12 inline-block mx-2'
-                            src={logo3}
-                            alt='/'
-                        />
-
-
-                    </div>
-                    </div>
-                    <div className="w-full  text-center py-5 ">
-                        <p className="text-xs mt-2 text-[#303030] py-1.5 ">
-                            &copy; 2023 Obsidian Entertainment, Inc. Obsidian Entertainment and the Obsidian Entertainment logo are trademarks or registered trademarks of Obsidian Entertainment, Inc. The Outer Worlds and The Outer Worlds logos are trademarks or registered trademarks of Obsidian Entertainment, Inc.
-                        </p>
-                        <p className="text-xs mt-2 text-[#303030] py-1.5">
-                            &copy; 2023 Take-Two Interactive Software, Inc. Trademarks belong to their respective owners. All rights reserved.
-                        </p>
-                        <p className="text-xs mt-2 text-[#303030] py-1.5">
-                            &copy; 2023 PS4 is a trademark of Sony Computer Entertainment Inc.
-                        </p>
-                        <p className="text-xs mt-2 text-[#303030] py-1.5">
-                            &copy; 2023 Nintendo Switch is a trademark of Nintendo.
-                        </p>
-                        <p className="text-xs mt-2 text-[#303030] py-1.5">
-                            &copy; 2023 Advanced Micro Devices, Inc. All rights reserved. AMD, the AMD Arrow logo, Radeon, Ryzen and combinations thereof are trademarks of Advanced Micro Devices, Inc.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
+  return (
+    <footer className="bg-[#000000] text-white pt-8 pb-10">
+      <div className="flex flex-col md:flex-row justify-start  pl-40 gap-20">
+        <div className="w-full md:w-1/4">
+          <div
+            className="text-3xl font-bold mb-2"
+            style={{ letterSpacing: "4px" }}
+          >
+            AM Players
+          </div>
+          <div className="text-[#eaeae4] text-sm">
+            Our goal is to develop exceptionally entertaining games. We believe
+            in presenting high-quality, engaging, and innovative features in our
+            games to be the best in the gaming industry.
+          </div>
+        </div>
+        <div className="w-full md:w-1/3">
+          <div className="text-xl  text-[#b0b0ad] mb-4 ">Contact Us</div>
+          <div>
+            <ul>
+              <li className="mb-2">
+                <FiMail className="inline-block mr-4" /> support@amplayers.com
+              </li>
+              <li className="mb-2">
+                <FiPhone className="inline-block mr-4" /> 042-35454300
+              </li>
+              <li className="mb-2 flex items-center">
+                <FiMapPin className="inline-block mr-4" />
+                <p className="w-[60%]">
+                  693, Ground Floor, J2 Block, Johar Town Lahore
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-between px-8">
+        <div className="w-full text-1.75xl py-10">
+          <ul className="mb-4 md:mb-0">
+            <li className="inline-block mr-6">
+              <Link href="/privacyPolicy">Privacy Policy</Link>
+            </li>
+            <li className="inline-block mr-6">
+              <Link href="/terms-of-use">Terms of use</Link>
+            </li>
+            <li className="inline-block mr-6">
+              <Link href="/legal">Legal</Link>
+            </li>
+            <li className="inline-block mr-6">
+              <Link href="/support">Support</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="w-full text-right text-1.75xl py-10">
+          2024 © AM Players | All Rights Reserved
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
