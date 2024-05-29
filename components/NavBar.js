@@ -29,14 +29,14 @@ const Navbar = () => {
   return (
     <>
       <div className="bg-black">
-        <div className="flex flex-row items-center justify-between w-full h-full px-16 py-4 2xl:px-16 bg-black">
+        <div className="flex flex-row items-center justify-between w-full h-full pr-4 md:pl-4 md:pr-16 py-4 2xl:px-16 bg-black">
           <div className="flex items-center">
             <Image src={Logo} width={60} height={60} alt="AM Players Logo" />
             <div className="text-lg font-bold text-white ml-[-12px]">
               AM Players
             </div>
           </div>
-          <div className="flex">
+          <div className="flex md:mb-4">
             <ul
               className={`hidden md:flex text-white ${navOpen ? "hidden" : ""}`}
             >
