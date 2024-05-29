@@ -1,12 +1,19 @@
 import React from "react";
+import Image from "next/image";
 
 const icons = Array.from({ length: 4 }, (_, i) => ({
-  src: `/icon$4.png`,
+  src: `/icon${i + 1}.png`,
 }));
 
 const Card = ({ imageUrl }) => (
   <div className="relative flex flex-col items-center justify-end border border-cd6977 overflow-hidden">
-    <img src={imageUrl} className="w-full h-full object-cover" alt="" />
+    <Image
+      src={imageUrl}
+      className="object-cover"
+      alt=""
+      width={500}
+      height={500}
+    />
   </div>
 );
 
