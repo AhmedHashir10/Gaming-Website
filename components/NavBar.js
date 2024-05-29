@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
-// import { useRouter } from 'next/router';
 import NavLogo from "../public/logo.svg";
+import Logo from "../public/logo.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -30,7 +30,12 @@ const Navbar = () => {
     <>
       <div className="bg-black">
         <div className="flex flex-row items-center justify-between w-full h-full px-16 py-4 2xl:px-16 bg-black">
-          <div className="text-lg font-bold text-white">AM Players</div>
+          <div className="flex items-center">
+            <Image src={Logo} width={60} height={60} alt="AM Players Logo" />
+            <div className="text-lg font-bold text-white ml-[-12px]">
+              AM Players
+            </div>
+          </div>
           <div className="flex mb-4">
             <ul className="hidden md:flex text-white">
               <li className="mt-5 ml-10 text-sm uppercase hover:text-[#ffd700] hover:border-[#ffd700] hover:border-b-2">

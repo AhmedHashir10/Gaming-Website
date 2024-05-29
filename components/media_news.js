@@ -1,83 +1,25 @@
-import Image from 'next/image'
-import mediaPic from '../public/mediapic.jpg'
+import React from "react";
 
-const Card = ({ imageUrl, title }) => (
-    <div className="relative flex flex-col items-center justify-end h-80 p-6 border border-cd6977  overflow-hidden">
-        <Image src={imageUrl} layout="fill" objectFit="cover" alt={title} />
-        <div className="absolute left-0 bottom-0 p-4">title</div>
-    </div>
-)
+const icons = Array.from({ length: 4 }, (_, i) => ({
+  src: `/icon${i + 1}.png`,
+}));
 
-{/* <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-  <div class="col-span-2 md:col-span-1 bg-gray-100 p-4">Card 1</div>
-  <div class="col-span-2 md:col-span-1 bg-gray-100 p-4">Card 2</div>
-  <div class="col-span-2 md:col-span-1 bg-gray-100 p-4">Card 3</div>
-  <div class="col-span-2 md:col-span-1 bg-gray-100 p-4">Card 4</div>
-  <div class="col-span-2 md:col-span-1 bg-gray-100 p-4">Card 5</div>
-  <div class="col-span-2 md:col-span-1 bg-gray-100 p-4">Card 6</div>
-  <div class="col-span-2 md:col-span-1 bg-gray-100 p-4">Card 7</div>
-  <div class="col-span-2 md:col-span-1 bg-gray-100 p-4">Card 8</div>
-  <div class="col-span-2 md:col-span-1 bg-gray-100 p-4">Card 9</div>
-</div> */}
-
+const Card = ({ imageUrl }) => (
+  <div className="relative flex flex-col items-center justify-end border border-cd6977 overflow-hidden">
+    <img src={imageUrl} className="w-full h-full object-cover" alt="" />
+  </div>
+);
 
 const Grid = () => (
-    <div >
-        <section class="grid grid-cols-2 md:grid-cols-3 gap-4 mx-20  ">
-            <div className="col-span-2 md:col-span-1 p-4 ">
-                <Card
-                    imageUrl={mediaPic}
-                    title="Card 1"
-                />
-            </div>
-            <div className="col-span-2 md:col-span-1 p-4 ">
-                <Card
-                    imageUrl={mediaPic}
-                    title="Card 1"
-                />
-            </div>
-            <div className="col-span-2 md:col-span-1 p-4">
-                <Card
-                    imageUrl={mediaPic}
-                    title="Card 1"
-                />
-            </div>
-            <div className="col-span-2 md:col-span-1 p-4">
-                <Card
-                    imageUrl={mediaPic}
-                    title="Card 1"
-                />
-            </div>
-            <div className="col-span-2 md:col-span-1 p-4">
-                <Card
-                    imageUrl={mediaPic}
-                    title="Card 1"
-                />
-            </div>
-            <div className="col-span-2 md:col-span-1 p-4">
-                <Card
-                    imageUrl={mediaPic}
-                    title="Card 1"
-                />
-            </div>
-            <div className="col-span-2 md:col-span-1 p-4">
-                <Card
-                    imageUrl={mediaPic}
-                    title="Card 1"
-                />
-            </div>
-            <div className="col-span-2 md:col-span-1 p-4">
-                <Card
-                    imageUrl={mediaPic}
-                    title="Card 1"
-                />
-            </div>
+  <div>
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-20">
+      {icons.map((icon, index) => (
+        <div key={index} className="p-4">
+          <Card imageUrl={icon.src} />
+        </div>
+      ))}
+    </section>
+  </div>
+);
 
-
-
-
-        </section>
-    </div>
-)
-
-export default Grid
+export default Grid;
