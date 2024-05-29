@@ -9,8 +9,8 @@ import logo4 from "../public/footerIcons/logo4.svg";
 const Footer = () => {
   return (
     <footer className="bg-[#000000] text-white pt-8 pb-10">
-      <div className="flex flex-col md:flex-row justify-start  pl-40 gap-20">
-        <div className="w-full md:w-1/4">
+      <div className="flex flex-col md:flex-row justify-start md:justify-center items-center pl-4 md:pl-0 gap-20">
+        <div className="w-1/2 md:w-1/4 text-center md:text-left">
           <div
             className="text-3xl font-bold mb-2"
             style={{ letterSpacing: "4px" }}
@@ -23,8 +23,8 @@ const Footer = () => {
             games to be the best in the gaming industry.
           </div>
         </div>
-        <div className="w-full md:w-1/3">
-          <div className="text-xl  text-[#b0b0ad] mb-4 ">Contact Us</div>
+        <div className="w-full md:w-1/3 text-center md:text-left mt-4 md:mt-0">
+          <div className="text-xl text-[#b0b0ad] mb-4">Contact Us</div>
           <div>
             <ul>
               <li className="mb-2">
@@ -35,10 +35,17 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between px-8">
-        <div className="w-full text-1.75xl py-10">
+      <div className="flex flex-col-reverse md:flex-row justify-between px-8">
+        <div className="w-full md:w-auto text-center md:text-left md:order-2">
+          <div className="text-1.75xl py-10">
+            2024 © AM Players | All Rights Reserved
+          </div>
+        </div>
+        <div className="w-full text-center md:text-left md:order-1">
           <ul className="mb-4 md:mb-0">
-            <li className="inline-block mr-6">
+            <li className="inline-block mr-6 mt-4 md:mt-0">
+              {" "}
+              {/* Added margin top for small screens */}
               <Link href="/privacyPolicy">Privacy Policy</Link>
             </li>
             <li className="inline-block mr-6">
@@ -51,9 +58,6 @@ const Footer = () => {
               <Link href="/support">Support</Link>
             </li>
           </ul>
-        </div>
-        <div className="w-full text-right text-1.75xl py-10">
-          2024 © AM Players | All Rights Reserved
         </div>
       </div>
     </footer>
