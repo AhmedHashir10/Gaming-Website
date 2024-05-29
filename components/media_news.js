@@ -1,7 +1,7 @@
 import React from "react";
 
 const icons = Array.from({ length: 4 }, (_, i) => ({
-  src: `/icon${i + 1}.png`,
+  src: `/icon$4.png`,
 }));
 
 const Card = ({ imageUrl }) => (
