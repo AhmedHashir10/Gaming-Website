@@ -6,13 +6,13 @@ import NavLogo from "../public/logo.svg";
 import Logo from "../public/logo.png";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("black");
   const [linkColor, setLinkColor] = useState("#1f2937");
 
   const handleNav = () => {
-    setNav(!nav);
+    setNavOpen(!navOpen);
   };
 
   useEffect(() => {
@@ -37,7 +37,9 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex mb-4">
-            <ul className="hidden md:flex text-white">
+            <ul
+              className={`hidden md:flex text-white ${navOpen ? "hidden" : ""}`}
+            >
               <li className="mt-5 ml-10 text-sm uppercase hover:text-[#ffd700] hover:border-[#ffd700] hover:border-b-2">
                 <Link href="/home">Home</Link>
               </li>
@@ -54,72 +56,39 @@ const Navbar = () => {
               onClick={handleNav}
               className="md:hidden"
             >
-              <AiOutlineMenu size={25} />
+              {navOpen ? (
+                <AiOutlineClose size={25} />
+              ) : (
+                <AiOutlineMenu size={25} />
+              )}
             </div>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {/* Overlay */}
-        <div
-          className={
-            nav
-              ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70"
-              : ""
-          }
-        >
-          {/* Side Drawer Menu */}
-          <div
-            className={
-              nav
-                ? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
-                : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
-            }
-          >
-            <div>
-              <div className="flex w-full items-center justify-between">
-                <Link href="/">
-                  <Image src={NavLogo} width="87" height="35" alt="/" />
-                </Link>
-                <div
-                  onClick={handleNav}
-                  className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
-                >
-                  <AiOutlineClose />
-                </div>
-              </div>
-            </div>
-            <div className="py-4 flex flex-col">
-              <ul className="uppercase">
-                <Link href="/">
-                  <li onClick={() => setNav(false)} className="py-4 text-sm">
-                    News
-                  </li>
-                </Link>
-                <Link href="/#about">
-                  <li onClick={() => setNav(false)} className="py-4 text-sm">
-                    Media
-                  </li>
-                </Link>
-                <Link href="/#skills">
-                  <li onClick={() => setNav(false)} className="py-4 text-sm">
-                    Community
-                  </li>
-                </Link>
-                <Link href="/#projects">
-                  <li onClick={() => setNav(false)} className="py-4 text-sm">
-                    Gear Support
-                  </li>
-                </Link>
-                <Link href="/resume">
-                  <li onClick={() => setNav(false)} className="py-4 text-sm">
-                    Buy Now
-                  </li>
-                </Link>
-              </ul>
+        {navOpen && (
+          <div className="md:hidden fixed inset-0 bg-black bg-opacity-75 z-50">
+            <div className="flex flex-col justify-center h-full text-white text-center">
+              <Link
+                href="/home"
+                className="block py-4 border-b border-gray-400"
+                onClick={() => setNavOpen(false)} // Close the mobile menu when Home is clicked
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className="block py-4 border-b border-gray-400"
+              >
+                About Us
+              </Link>
+              <Link href="/contact" className="block py-4">
+                Contact Us
+              </Link>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </>
   );
