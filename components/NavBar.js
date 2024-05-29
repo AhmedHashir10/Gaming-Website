@@ -36,7 +36,7 @@ const Navbar = () => {
               AM Players
             </div>
           </div>
-          <div className="flex mb-4">
+          <div className="flex">
             <ul
               className={`hidden md:flex text-white ${navOpen ? "hidden" : ""}`}
             >
