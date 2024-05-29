@@ -28,16 +28,8 @@ const Footer = () => {
           <div>
             <ul>
               <li className="mb-2">
-                <FiMail className="inline-block mr-4" /> support@amplayers.com
-              </li>
-              <li className="mb-2">
-                <FiPhone className="inline-block mr-4" /> 042-35454300
-              </li>
-              <li className="mb-2 flex items-center">
-                <FiMapPin className="inline-block mr-4" />
-                <p className="w-[60%]">
-                  693, Ground Floor, J2 Block, Johar Town Lahore
-                </p>
+                <FiMail className="inline-block mr-4" />{" "}
+                amplay.entertainment@gmail.com
               </li>
             </ul>
           </div>
