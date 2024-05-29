@@ -73,6 +73,7 @@ const Navbar = () => {
               <Link
                 href="/home"
                 className="block py-4 border-b border-gray-400"
+                onClick={() => setNavOpen(false)} // Close the mobile menu when Home is clicked
               >
                 Home
               </Link>
