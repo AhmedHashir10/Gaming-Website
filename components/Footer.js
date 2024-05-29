@@ -35,15 +35,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col-reverse md:flex-row justify-between px-8">
-        <div className="w-full md:w-auto text-center md:text-left md:order-2">
-          <div className="text-1.75xl py-10">
-            2024 © AM Players | All Rights Reserved
-          </div>
-        </div>
-        <div className="w-full text-center md:text-left md:order-1">
-          <ul className="mb-4 md:mb-0">
-            <li className="inline-block mr-6 mt-4 md:mt-0">
+      <div className="flex flex-col md:flex-row justify-between px-8 mt-4 md:mt-0">
+        <div className="w-full text-center sm:text-left md:order-1 flex justify-center md:justify-start items-center">
+          {" "}
+          {/* Modified */}
+          <ul className="mb-4 md:mb-0 flex">
+            {" "}
+            {/* Modified */}
+            <li className="inline-block mr-6  md:mt-0 md:mr-0">
               {" "}
               {/* Added margin top for small screens */}
               <Link href="/privacyPolicy">Privacy Policy</Link>
@@ -58,6 +57,11 @@ const Footer = () => {
               <Link href="/support">Support</Link>
             </li>
           </ul>
+        </div>
+        <div className="w-full  text-center md:text-right md:order-2">
+          <div className="text-1.75xl py-10">
+            2024 © AM Players | All Rights Reserved
+          </div>
         </div>
       </div>
     </footer>
