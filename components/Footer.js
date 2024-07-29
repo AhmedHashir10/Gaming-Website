@@ -48,7 +48,7 @@ const Footer = () => {
               <Link href="/privacyPolicy">Privacy Policy</Link>
             </li>
             <li className="inline-block mr-6">
-              <Link href="/terms-of-use">Terms of use</Link>
+              <Link href="/app-add.txt">Terms of use</Link>
             </li>
             <li className="inline-block mr-6">
               <Link href="/legal">Legal</Link>
